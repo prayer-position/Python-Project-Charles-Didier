@@ -183,7 +183,7 @@ def data_window():
     root.withdraw()
     
     # Open file dialog and load CSV
-    file_path = filedialog.askopenfilename(filetypes=[("CSV files", "*.csv")])
+    file_path = "volcanes.csv"
     if file_path:
         df = load_volcano(file_path, tree)
         print("file_path found")
@@ -235,11 +235,11 @@ def main_window():
     frame.pack(fill="both", expand=True)
     
     try:
-        original_img1 = Image.open(r"B:\Python uvic\Images\volcano_1.png")
+        original_img1 = Image.open("volcano_1.png")
         resized_img1 = original_img1.resize((320, 180))  # Resize to 150x150 pixels
         volcano_1_img = ImageTk.PhotoImage(resized_img1)
 
-        original_img2 = Image.open(r"B:\Python uvic\Images\volcano_2.png")
+        original_img2 = Image.open("volcano_2.png")
         resized_img2 = original_img2.resize((320, 180))  # Resize to 150x150 pixels
         volcano_2_img = ImageTk.PhotoImage(resized_img2)
     except Exception as e:
